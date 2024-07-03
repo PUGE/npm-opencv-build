@@ -1,6 +1,6 @@
 {
-  "name": "opencv-build",
-  "version": "0.1.9",
+  "name": "@puge/opencv-build",
+  "version": "0.2.0",
   "description": "A simple script to auto build recent OpenCV + contrib version via npm",
   "main": "./build/index.js",
   "scripts": {
@@ -10,7 +10,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/justadudewhohacks/npm-opencv-build.git"
+    "url": "git+https://github.com/PUGE/npm-opencv-build"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
   "keywords": [
     "opencv",
@@ -20,9 +24,9 @@
   "author": "justadudewhohacks",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/justadudewhohacks/npm-opencv-build/issues"
+    "url": "https://github.com/PUGE/npm-opencv-build/issues"
   },
-  "homepage": "https://github.com/justadudewhohacks/npm-opencv-build#readme",
+  "homepage": "https://github.com/PUGE/npm-opencv-build#readme",
   "dependencies": {
     "npmlog": "^4.1.2"
   },
