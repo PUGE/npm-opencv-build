@@ -10,7 +10,7 @@ function getLibsFactory(args) {
         return isWin() ? 'lib' : (isOSX() ? 'dylib' : 'so');
     }
     function getLibNameRegex(opencvModuleName) {
-        return new RegExp("^" + getLibPrefix() + opencvModuleName + "[0-9]{0,3}." + getLibSuffix() + "$");
+        return new RegExp("^" + getLibPrefix() + opencvModuleName + "[0-9]{0,4}." + getLibSuffix() + "$");
     }
     function createLibResolver(libDir) {
         function getLibAbsPath(libFile) {
