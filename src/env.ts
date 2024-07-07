@@ -5,7 +5,17 @@ import * as path from 'path';
 import { dirs } from './dirs';
 import { AutoBuildFile } from './types';
 
-const log = require('npmlog')
+const winston = require('winston');
+const log = winston.createLogger({
+  level: 'info',
+  format: winston.format.combine(
+    winston.format.colorize(),
+    winston.format.simple()
+  ),
+  transports: [
+    new winston.transports.Console()
+  ]
+});
 
 export function isAutoBuildDisabled() {
   return !!process.env.OPENCV4NODEJS_DISABLE_AUTOBUILD

@@ -16,7 +16,17 @@ import { setupOpencv } from './setupOpencv';
 import { AutoBuildFile } from './types';
 import { isOSX, isWin, requireCmake, requireGit } from './utils';
 
-const log = require('npmlog')
+const winston = require('winston');
+const log = winston.createLogger({
+  level: 'info',
+  format: winston.format.combine(
+    winston.format.colorize(),
+    winston.format.simple()
+  ),
+  transports: [
+    new winston.transports.Console()
+  ]
+});
 
 const getLibs = getLibsFactory({ isWin, isOSX, opencvModules, path, fs })
 

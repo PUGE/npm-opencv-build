@@ -4,7 +4,18 @@ var fs = require("fs");
 var os = require("os");
 var path = require("path");
 var dirs_1 = require("./dirs");
-var log = require('npmlog');
+var winston = require('winston');
+const log = winston.createLogger({
+    level: 'info',
+    format: winston.format.combine(
+        winston.format.colorize(),
+        winston.format.simple()
+    ),
+    transports: [
+        new winston.transports.Console()
+    ]
+});
+
 function isAutoBuildDisabled() {
     return !!process.env.OPENCV4NODEJS_DISABLE_AUTOBUILD;
 }

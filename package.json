@@ -1,11 +1,11 @@
 {
   "name": "@puge/opencv-build",
-  "version": "0.2.1",
+  "version": "0.2.3",
   "description": "A simple script to auto build recent OpenCV + contrib version via npm",
   "main": "./build/index.js",
   "scripts": {
     "build": "rm -rf build && tsc",
-    "install": "node ./install.js",
+    "postinstall": "node ./install.js",
     "test": "mocha --recursive ./test"
   },
   "repository": {
@@ -28,12 +28,12 @@
   },
   "homepage": "https://github.com/PUGE/npm-opencv-build#readme",
   "dependencies": {
-    "npmlog": "^4.1.2"
+    "winston": "^3.13.0"
   },
   "devDependencies": {
-    "@types/node": "^12.7.4",
-    "chai": "^4.2.0",
-    "mocha": "^6.2.0",
-    "typescript": "^3.6.2"
+    "@types/node": "^20.14.10",
+    "chai": "^5.1.1",
+    "mocha": "^10.6.0",
+    "typescript": "^5.5.3"
   }
 }

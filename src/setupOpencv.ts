@@ -16,7 +16,17 @@ import { findMsBuild } from './findMsBuild';
 import { AutoBuildFile } from './types';
 import { exec, isCudaAvailable, isWin, spawn } from './utils';
 
-const log = require('npmlog')
+const winston = require('winston');
+const log = winston.createLogger({
+  level: 'info',
+  format: winston.format.combine(
+    winston.format.colorize(),
+    winston.format.simple()
+  ),
+  transports: [
+    new winston.transports.Console()
+  ]
+});
 
 function getIfExistsDirCmd(dirname: string, exists: boolean = true): string {
   return isWin() ? `if ${!exists ? 'not ' : ''}exist ${dirname}` : ''

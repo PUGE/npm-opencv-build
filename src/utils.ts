@@ -2,7 +2,17 @@ import * as child_process from 'child_process';
 import * as fs from 'fs';
 import * as path from 'path';
 
-const log = require('npmlog')
+const winston = require('winston');
+const log = winston.createLogger({
+  level: 'info',
+  format: winston.format.combine(
+    winston.format.colorize(),
+    winston.format.simple()
+  ),
+  transports: [
+    new winston.transports.Console()
+  ]
+});
 
 export function exec(cmd: string, options?: child_process.ExecOptions): Promise<string> {
   log.silly('install', 'executing:', cmd)

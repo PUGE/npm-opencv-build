@@ -38,7 +38,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var path = require('path');
 var fs = require('fs');
-var log = require('npmlog');
+var log = require('winston');
 var _a = require('./utils'), exec = _a.exec, execFile = _a.execFile;
 /* this codesnippet is partly taken from the node-gyp source: https://github.com/nodejs/node-gyp */
 function findVs2017() {

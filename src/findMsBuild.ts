@@ -1,6 +1,16 @@
 const path = require('path')
 const fs = require('fs')
-const log = require('npmlog')
+const winston = require('winston');
+const log = winston.createLogger({
+  level: 'info',
+  format: winston.format.combine(
+    winston.format.colorize(),
+    winston.format.simple()
+  ),
+  transports: [
+    new winston.transports.Console()
+  ]
+});
 const { exec, execFile } = require('./utils')
 
 /* this codesnippet is partly taken from the node-gyp source: https://github.com/nodejs/node-gyp */

@@ -44,7 +44,7 @@ var dirs_1 = require("./dirs");
 var env_1 = require("./env");
 var findMsBuild_1 = require("./findMsBuild");
 var utils_1 = require("./utils");
-var log = require('npmlog');
+var log = require('winston');
 function getIfExistsDirCmd(dirname, exists) {
     if (exists === void 0) { exists = true; }
     return utils_1.isWin() ? "if " + (!exists ? 'not ' : '') + "exist " + dirname : '';

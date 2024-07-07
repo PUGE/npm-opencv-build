@@ -39,7 +39,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var child_process = require("child_process");
 var fs = require("fs");
 var path = require("path");
-var log = require('npmlog');
+var log = require('winston');
 function exec(cmd, options) {
     log.silly('install', 'executing:', cmd);
     return new Promise(function (resolve, reject) {
