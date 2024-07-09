@@ -1,6 +1,6 @@
 {
   "name": "@puge/opencv-build",
-  "version": "0.2.3",
+  "version": "0.2.7",
   "description": "A simple script to auto build recent OpenCV + contrib version via npm",
   "main": "./build/index.js",
   "scripts": {

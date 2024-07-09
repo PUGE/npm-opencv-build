@@ -33,7 +33,7 @@ function autoBuildFlags() {
 }
 exports.autoBuildFlags = autoBuildFlags;
 function opencvVersion() {
-    return process.env.OPENCV4NODEJS_AUTOBUILD_OPENCV_VERSION || '4.10.0';
+    return process.env.OPENCV4NODEJS_AUTOBUILD_OPENCV_VERSION || '3.4.10';
 }
 exports.opencvVersion = opencvVersion;
 function numberOfCoresAvailable() {
